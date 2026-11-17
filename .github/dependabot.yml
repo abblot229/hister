@@ -1,52 +1,57 @@
 version: 2
-updates: []
+updates:
+  - package-ecosystem: gomod
+    open-pull-requests-limit: 0
+    rebase-strategy: disabled
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      go-deps:
+        patterns:
+          - '*'
 
-# OWNER disabled all Dependabot version-update ecosystems on 2026-11-17.
-# Original configuration is preserved below for recovery.
-# version: 2
-# updates:
-#   - package-ecosystem: gomod
-#     directory: /
-#     schedule:
-#       interval: weekly
-#       day: monday
-#     groups:
-#       go-deps:
-#         patterns:
-#           - '*'
-# 
-#   - package-ecosystem: npm
-#     directory: /
-#     schedule:
-#       interval: weekly
-#       day: monday
-#     groups:
-#       npm-deps:
-#         patterns:
-#           - '*'
-# 
-#   - package-ecosystem: docker
-#     directory: /
-#     schedule:
-#       interval: weekly
-#       day: monday
-# 
-#   - package-ecosystem: github-actions
-#     directory: /
-#     schedule:
-#       interval: weekly
-#       day: monday
-#     groups:
-#       gha-deps:
-#         patterns:
-#           - '*'
-# 
-#   - package-ecosystem: nix
-#     directory: /
-#     schedule:
-#       interval: weekly
-#       day: monday
-#     groups:
-#       nix-deps:
-#         patterns:
-#           - '*'
+  - package-ecosystem: npm
+    open-pull-requests-limit: 0
+    rebase-strategy: disabled
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      npm-deps:
+        patterns:
+          - '*'
+
+  - package-ecosystem: docker
+    open-pull-requests-limit: 0
+    rebase-strategy: disabled
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+
+  - package-ecosystem: github-actions
+    open-pull-requests-limit: 0
+    rebase-strategy: disabled
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      gha-deps:
+        patterns:
+          - '*'
+
+  - package-ecosystem: nix
+    open-pull-requests-limit: 0
+    rebase-strategy: disabled
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      nix-deps:
+        patterns:
+          - '*'
